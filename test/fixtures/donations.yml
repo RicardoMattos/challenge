@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  donor: MyText
+  type: MyText
+  quantity: 1
+
+two:
+  donor: MyText
+  type: MyText
+  quantity: 1
