@@ -1,3 +1,5 @@
+<h3>Admins description</h3>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,5 +12,7 @@
   <%= @admin.email %>
 </p>
 
-<%= link_to 'Edit', edit_admin_path(@admin) %> |
-<%= link_to 'Back', admins_path %>
+<hr>
+
+<%= link_to 'Edit', edit_admin_path(@admin), class: "btn btn-secondary" %> |
+<%= link_to 'Back', admins_path, class: "btn btn-secondary" %>

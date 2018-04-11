@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Vets</h1>
+<h3>Listing Vets</h3>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="text-center">
     <tr>
       <th>Name</th>
       <th>Phone</th>
@@ -13,16 +13,16 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="text-center">
     <% @vets.each do |vet| %>
       <tr>
         <td><%= vet.name %></td>
         <td><%= vet.phone %></td>
         <td><%= vet.crv %></td>
         <td><%= vet.address %></td>
-        <td><%= link_to 'Show', vet %></td>
-        <td><%= link_to 'Edit', edit_vet_path(vet) %></td>
-        <td><%= link_to 'Destroy', vet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', vet, class: "btn btn-secondary btn-sm btn-block" %></td>
+        <td><%= link_to 'Edit', edit_vet_path(vet), class: "btn btn-secondary btn-sm btn-block" %></td>
+        <td><%= link_to 'Destroy', vet, class: "btn btn-danger btn-sm btn-block", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Vet', new_vet_path %>
+<%= link_to 'New Vet', new_vet_path, class: "btn btn-primary" %>

@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Attendances</h1>
+<h3>Listing Attendances</h3>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="text-center">
     <tr>
       <th>Dt</th>
       <th>Animal</th>
@@ -13,16 +13,13 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="text-center">
     <% @attendances.each do |attendance| %>
       <tr>
         <td><%= attendance.dt %></td>
-        <td><%= attendance.animal %></td>
-        <td><%= attendance.vet %></td>
+        <td><%= attendance.animal.name %></td>
+        <td><%= attendance.vet.name %></td>
         <td><%= attendance.obs %></td>
-        <td><%= link_to 'Show', attendance %></td>
-        <td><%= link_to 'Edit', edit_attendance_path(attendance) %></td>
-        <td><%= link_to 'Destroy', attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Attendance', new_attendance_path %>
+<%= link_to 'New Attendance', new_attendance_path, class: "btn btn-primary" %>

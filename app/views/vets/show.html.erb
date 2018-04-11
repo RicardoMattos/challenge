@@ -1,3 +1,5 @@
+<h3>Vet description</h3>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,5 +22,7 @@
   <%= @vet.address %>
 </p>
 
-<%= link_to 'Edit', edit_vet_path(@vet) %> |
-<%= link_to 'Back', vets_path %>
+<hr>
+
+<%= link_to 'Edit', edit_vet_path(@vet), class: "btn btn-secondary" %> |
+<%= link_to 'Back', vets_path, class: "btn btn-secondary" %>

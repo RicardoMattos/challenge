@@ -1,3 +1,5 @@
+<h3>Donation description</h3>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +9,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @donation.type %>
+  <%= @donation.donation_type %>
 </p>
 
 <p>
@@ -15,5 +17,7 @@
   <%= @donation.quantity %>
 </p>
 
-<%= link_to 'Edit', edit_donation_path(@donation) %> |
-<%= link_to 'Back', donations_path %>
+<hr>
+
+<%= link_to 'Edit', edit_donation_path(@donation), class: "btn btn-secondary" %> |
+<%= link_to 'Back', donations_path, class: "btn btn-secondary" %>

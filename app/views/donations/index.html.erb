@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Donations</h1>
+<h3>Listing Donations</h3>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="text-center">
     <tr>
       <th>Donor</th>
       <th>Type</th>
@@ -12,15 +12,15 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="text-center">
     <% @donations.each do |donation| %>
       <tr>
         <td><%= donation.donor %></td>
-        <td><%= donation.type %></td>
+        <td><%= donation.donation_type %></td>
         <td><%= donation.quantity %></td>
-        <td><%= link_to 'Show', donation %></td>
-        <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
-        <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', donation, class: "btn btn-secondary btn-sm btn-block" %></td>
+        <td><%= link_to 'Edit', edit_donation_path(donation), class: "btn btn-secondary btn-sm btn-block" %></td>
+        <td><%= link_to 'Destroy', donation, class: "btn btn-danger btn-sm btn-block", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Donation', new_donation_path %>
+<%= link_to 'New Donation', new_donation_path, class: "btn btn-primary" %>

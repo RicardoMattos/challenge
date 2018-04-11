@@ -1,18 +1,20 @@
+<h3>Attendance description</h3>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Dt:</strong>
+  <strong>Date:</strong>
   <%= @attendance.dt %>
 </p>
 
 <p>
   <strong>Animal:</strong>
-  <%= @attendance.animal %>
+  <%= @attendance.animal.name %>
 </p>
 
 <p>
   <strong>Vet:</strong>
-  <%= @attendance.vet %>
+  <%= @attendance.vet.name %>
 </p>
 
 <p>
@@ -20,5 +22,7 @@
   <%= @attendance.obs %>
 </p>
 
-<%= link_to 'Edit', edit_attendance_path(@attendance) %> |
-<%= link_to 'Back', attendances_path %>
+<hr>
+
+<%= link_to 'Edit', edit_attendance_path(@attendance), class: "btn btn-secondary" %> |
+<%= link_to 'Back', attendances_path, class: "btn btn-secondary" %>
