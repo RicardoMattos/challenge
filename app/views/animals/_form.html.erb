@@ -31,6 +31,14 @@
     <%= f.label :obs %><br>
     <%= f.text_area :obs, class: "form-control" %>
   </div>
+  
+  
+  <div class="form-group">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar, class: "form-control" %>
+  </div>
+  
+  
   <div class="actions">
     <%= f.submit "Save", :class => "btn btn-success" %>
   </div>
