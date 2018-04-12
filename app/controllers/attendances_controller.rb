@@ -1,5 +1,6 @@
 class AttendancesController < ApplicationController
-
+  before_action :require_user, only: [:index, :new]
+  
   # GET /attendances
   # GET /attendances.json
   def index

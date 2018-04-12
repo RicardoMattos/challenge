@@ -1,4 +1,5 @@
 class VetsController < ApplicationController
+  before_action :require_user, only: [:index, :show, :new, :edit]
   before_action :set_vet, only: [:show, :edit, :update, :destroy]
 
   # GET /vets

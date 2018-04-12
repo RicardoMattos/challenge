@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+  before_action :require_user, only: [:index, :show, :new, :edit]
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   # GET /animals
