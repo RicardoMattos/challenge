@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
   before_action :require_user, only: [:index, :show, :new, :edit]
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /animals
   # GET /animals.json
   def index
@@ -11,6 +11,7 @@ class AnimalsController < ApplicationController
   # GET /animals/1
   # GET /animals/1.json
   def show
+    @attendances = @animal.getAttendance()
   end
 
   # GET /animals/new
@@ -26,8 +27,6 @@ class AnimalsController < ApplicationController
   # POST /animals.json
   def create
     @animal = Animal.new(animal_params)
-    #@animal.avatar = params[:avatar]
-    #puts params[:avatar]
 
     respond_to do |format|
       if @animal.save
