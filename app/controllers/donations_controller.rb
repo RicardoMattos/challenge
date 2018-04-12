@@ -16,10 +16,12 @@ class DonationsController < ApplicationController
   # GET /donations/new
   def new
     @donation = Donation.new
+    inicialize_variables
   end
 
   # GET /donations/1/edit
   def edit
+    inicialize_variables
   end
 
   # POST /donations
@@ -32,6 +34,7 @@ class DonationsController < ApplicationController
         format.html { redirect_to @donation, notice: 'Donation was successfully created.' }
         format.json { render :show, status: :created, location: @donation }
       else
+        inicialize_variables
         format.html { render :new }
         format.json { render json: @donation.errors, status: :unprocessable_entity }
       end
@@ -70,6 +73,10 @@ class DonationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def donation_params
-      params.require(:donation).permit(:donor, :donation_type, :quantity)
+      params.require(:donation).permit(:donor, :donation_type, :quantity, :animal_id)
+    end
+    
+    def inicialize_variables
+      @animals = Animal.all
     end
 end
