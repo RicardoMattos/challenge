@@ -60,6 +60,7 @@ Construir imagem Docker:
 $ docker build -t challenge/bixano .
 ```
 Subir container Docker a partir da imagem criada:
+
 1 -container em background:
 ```
 $ docker run -d -p 3000:3000 challenge/bixano
