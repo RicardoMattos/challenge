@@ -4,19 +4,23 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
 gem 'sqlite3'
+
+# Assets
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap', '~> 4.0.0'
+
+# Json generation
+gem 'jbuilder', '~> 2.0'
 
 # Create seeds from database
 gem 'seed_dump'
 
-# Use ActiveModel has_secure_password
+# Authentication
 gem 'bcrypt', '~> 3.1.7'
 
 # Simple way to upload files
@@ -29,8 +33,15 @@ gem 'carrierwave', '~> 1.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  #Code analysis
+  gem 'rubocop'
+  
+  # Testing
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'fuubar'
 end
 
 group :development do
