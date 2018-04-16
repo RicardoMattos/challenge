@@ -18,4 +18,4 @@ ENV BUNDLE_PATH="/gems" RAILS_ENV=${rails_env}
 RUN bundle install 
 RUN rake db:create db:migrate
 
-CMD rails s -b 0.0.0.0 -p 8000
+CMD rails s -b 0.0.0.0
