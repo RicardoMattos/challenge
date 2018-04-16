@@ -57,16 +57,16 @@ Acessar em: http://localhost:3000
 #### Usando Docker
 Construir imagem Docker:
 ```
-$ docker build .
+$ docker build -t challenge/bixano .
 ```
 Subir container Docker a partir da imagem criada:
 1 -container em background:
 ```
-$ docker run -d -p 3000:3000 <image_id>
+$ docker run -d -p 3000:3000 challenge/bixano
 ```
 2 - container em modo interativo(acompanhamento dos logs):
 ```
-$ docker run -ti -p 3000:3000 <image_id>
+$ docker run -ti -p 3000:3000 challenge/bixano
 ```
 
 Acessar em: http://localhost:3000
