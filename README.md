@@ -21,15 +21,15 @@ Utilizando o framework Rails desenvolva:
 O repositório deve ser forkado e feito PR com a implementação realizada.
 ```
 
-# Critério de avalição
+[comment]: <> (# Critério de avalição)
 
-1. Entender os conceitos de OO, framework e linguagem
-2. Code design
-3. Habilidade de escrever boa documentação
-4. Error handling 
-5. BONUS: build e/ou deploy scripts
-6. BONUS: Docker script 
-7. BONUS: Teste unitário e automação de testes
+[comment]: <> (1. Entender os conceitos de OO, framework e linguagem)
+[comment]: <> (2. Code design)
+[comment]: <> (3. Habilidade de escrever boa documentação)
+[comment]: <> (4. Error handling)
+[comment]: <> (5. BONUS: build e/ou deploy scripts)
+[comment]: <> (6. BONUS: Docker script)
+[comment]: <> (7. BONUS: Teste unitário e automação de testes)
 
 # Como subir a aplicação
 
